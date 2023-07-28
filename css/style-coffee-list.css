@@ -46,14 +46,14 @@
 
 .category-button,
 .sub-category-button {
-  padding: 5px;
-  margin: 10px;
+  padding: 3px;
+  margin: 10px 3px;
   background-color: var(--color4);
   border-radius: 15px;
-  border: 1px solid #874c19;
+  /* border: 1px solid #874c19; */
   box-shadow: 1px 2px 2px #000000;
   color: var(--color6);
-  width: 100px;
+  width: 70px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 300;;
@@ -117,6 +117,13 @@
   font-size: 12px;
 }
 
+.cup-cont {
+  display: flex;
+  justify-content: center;
+}
+.cup-cont img {
+  width: 80%;
+}
 .product .size-buttons {
   display: flex;
   justify-content: space-around;
@@ -137,6 +144,7 @@
 }
 
 .product button,
+#screenshot-btn,
 #copy-text-btn,
 #clear-cart {
   padding: 5px;
@@ -159,10 +167,21 @@
 .category-button:active,
 .sub-category-button:active,
 tbody button:active,
+#screenshot-btn:active,
 #copy-text-btn:active,
 #clear-cart:active {
   box-shadow: inset 1px 2px 5px #181818da;
-  border: 1px solid rgba(0, 0, 0, 0.475);
+  /* border: 1px solid #00000079; */
+}
+
+:is(.category-button,
+.sub-category-button,
+.product button,
+tbody button,
+#screenshot-btn,
+#copy-text-btn,
+#clear-cart):hover {
+    border: 1px solid black;
 }
 
 .cart-cont {
@@ -176,6 +195,7 @@ tbody button:active,
   width: max-content;
   border: 5px ridge #0000005a;
   border-radius: 5px;
+  background-color: #000000af;
 }
 
 #cart h2 {
@@ -244,6 +264,7 @@ tbody button {
   margin-top: 5px;
 }
 
+#screenshot-btn,
 #copy-text-btn{
   white-space: nowrap;
   width: auto;
@@ -284,6 +305,17 @@ footer p {
   text-align: center;
   letter-spacing: 5px;
   word-spacing: 2px;
+}
+
+@media (hover:hover) and (pointer: fine) {
+  .category-button,
+  .sub-category-button,
+  .product button,
+  tbody button,
+  #copy-text-btn,
+  #clear-cart {
+    border: 1px solid transparent;
+  }
 }
 
 @media screen and (max-width: 520px) {

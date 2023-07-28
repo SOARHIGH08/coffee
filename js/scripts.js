@@ -297,20 +297,38 @@ document.addEventListener("keydown", event => {
 });
 
 // Copy text button functionality
-function copyCartText() {
-  const cartText = cartItems.textContent;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(cartText)
-      .then(() => {
-        alert('Cart content copied to clipboard!');
-      })
-      .catch(error => {
-        console.error('Copy failed:', error);
-      });
-  } else {
-    console.warn('Clipboard API not supported in this browser.');
-  }
-}
+// function copyCartText() {
+//   const cartText = cartItems.textContent;
+//   if (navigator.clipboard && navigator.clipboard.writeText) {
+//     navigator.clipboard.writeText(cartText)
+//       .then(() => {
+//         alert('Cart content copied to clipboard!');
+//       })
+//       .catch(error => {
+//         console.error('Copy failed:', error);
+//       });
+//   } else {
+//     console.warn('Clipboard API not supported in this browser.');
+//   }
+// }
 
-copyTextBtn.addEventListener("click", copyCartText);
+// copyTextBtn.addEventListener("click", copyCartText);
 
+
+// Take screenshot of the cart
+document.getElementById("screenshot-btn").addEventListener("click", function() {
+  // Select the element you want to capture
+  const elementToCapture = document.getElementById("cart");
+
+  // Use html2canvas library to create a screenshot
+  html2canvas(elementToCapture).then(function(canvas) {
+    // Convert the canvas to an image data URL
+    const screenshotData = canvas.toDataURL();
+
+    // Create a temporary link and trigger the download
+    const link = document.createElement("a");
+    link.download = "screenshot.png";
+    link.href = screenshotData;
+    link.click();
+  });
+});
