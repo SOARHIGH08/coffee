@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+
+  <title>Coffee List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style-coffee-list.css?v=6">
+</head>
+<body>
+  
+  <div class="bg">
+    <img src="img/cofi-bg.jpg"></img>
+  </div>
+  
+  <div>
+    <div class="logo-vb">
+
+    </div>
+
+    <h1 class="title">COFFEE LIST</h1>
+
+    <div class="category-cont">
+      <p>Choose Category</p>
+      <div class="category-buttons">
+        <button class="category-button default" id="hotButs" data-category="hot">Hot</button>
+        <button class="category-button" id="icedButs" data-category="iced">Iced</button>
+        <button class="category-button" id="frappeButs" data-category="frappe">Frappe</button>
+      </div>
+    </div>
+
+
+    <!-- hot section -->
+    <section class="coffee-list-section" data-category="hot">
+      <section class="hot">  
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[hot] - </span>13 IN 1</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/8.png" alt="">
+          </div>
+      
+          <div class="size-buts">
+            <p>Regular</p>
+            <button class="size" data-size="Regular" data-price="55">Php 55.00</button>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[hot] - </span>CAFE LATTE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/8.png" alt="">
+          </div>
+      
+          <div class="size-buts">
+            <p>Regular</p>
+            <button class="size" data-size="Regular" data-price="55">Php 60.00</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[hot] - </span>MORINGA DRINK</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/8.png" alt="">
+          </div>
+      
+          <div class="size-buts">
+            <p>Regular</p>
+            <button class="size" data-size="Regular" data-price="55">Php 55.00</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[hot] - </span></span>CHOCO MATCHA BERRY</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/8.png" alt="">
+          </div>
+      
+          <div class="size-buts">
+            <p>Regular</p>
+            <button class="size" data-size="Regular" data-price="60">Php 60.00</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[hot] - </span></span>CHOCO BERRY LATTE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/8.png" alt="">
+          </div>
+      
+          <div class="size-buts">
+            <p>Regular</p>
+            <button class="size" data-size="Regular" data-price="60">Php 60.00</button>
+          </div>
+        </div>
+
+      </section>
+    </section>
+
+
+    <!-- iced section -->
+    <section class="coffee-list-section" data-category="iced" style="display: none;">
+
+      <div class="category-cont">
+       <p>Sub Category:</p>
+        <div class="sub-category-buttons">
+          <button class="sub-category-button default" id="iClassicButs" data-sub-category="classic">Classic</button>
+          <button class="sub-category-button" id="iMilkTeaButs" data-sub-category="milk-tea">Milk Tea</button>
+          <button class="sub-category-button" id="iPremiumButs" data-sub-category="premium">Premium</button>
+        </div>
+      </div>
+      
+      <!-- iced classic -->
+      <section class="classic">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>ICED COFFEE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+      
+          <div class="cup-cont">
+            <img class="cup" src="img/3.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="75">Php 75.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="85">Php 85.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>ICED CAFE MOCHA</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/4.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="75">Php 75.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="85">Php 85.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>OKINAWA</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/5.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="85">Php 85.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="95">Php 95.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>HOKKAIDO</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/7.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="85">Php 85.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="95">Php 95.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>CHOCO BERRY ICE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/3.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="80">Php 80.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="90">Php 90.00</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>CHOCO MATCHA BERRY</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/4.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="85">Php 85.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="95">Php 95.00</button>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+      
+      <!-- iced milk tea -->
+      <section class="milk-tea" style="display: none;">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>TARO</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/3.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="105">Php 105.00</button>
+            </div>
+          </div>
+        </div>
+          
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>HONEYDEW</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/4.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>WATERMELON</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/5.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+          
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>GREEN APPLE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/7.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+     
+      <!-- iced premium -->
+      <section class="premium" style="display: none;">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>PINK ROSE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/5.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+          
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>LYCHEE PULP</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/7.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="95">Php 95.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="105">Php 105.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span>WINTERMELON</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/3.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="89">Php 89.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>CHOCO MINT</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/4.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="89">Php 89.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>FRENCH HAZELNUT</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/5.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="100">Php 100.00</button>
+            </div>
+            
+            <div class="size-buts">
+              <p>Venti</p>
+              <button class="size" data-size="Venti" data-price="110">Php 110.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>COFFEE FRENCH CHEESECAKE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/7.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>CHOCO CHEESECAKE COFFEE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/3.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>CHEESECAKE COFFEE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/4.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="95">Php 95.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[iced] - </span></span>SALTED CARAMEL COFFEE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Gluta-Collagen</p>
+          </div>
+
+          <div class="cup-cont">
+            <img class="cup" src="img/5.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+
+    </section>
+
+    <!-- frappe section -->
+    <section class="coffee-list-section" data-category="frappe" style="display: none;">
+
+      <div class="category-cont">
+        <p>Sub Category:</p>
+         <div class="sub-category-buttons">
+           <button class="sub-category-button default" id="fClassicButs" data-sub-category="classic">Classic</button>
+           <button class="sub-category-button" id="fMilkTeaButs" data-sub-category="milk-tea">Milk Tea</button>
+           <button class="sub-category-button" id="fPremiumButs" data-sub-category="premium">Premium</button>
+         </div>
+       </div>
+        
+      <!-- frappe classic -->
+      <section class="classic">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>CLASSIC COFFEE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/6.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>MOCHA FRAPPE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/1.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>COOKIES & CREAM</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/6.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>OKINAWA</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/1.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>HOKKAIDO</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/6.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>MORINGA CHOCO FRAPPE</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/1.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+      
+      <!-- frappe milk tea -->
+      <section class="milk-tea" style="display: none;">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>TARO PREMIUM</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/9.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="109">Php 109.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>HONEYDEW</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moinga-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/2.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>WATERMELON</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/9.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span></span>GREEN APPLE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/2.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      
+      <!-- frappe premium -->
+      <section class="premium" style="display: none;">
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>RED VELVET CHEESECAKE</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/1.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="115">Php 115.00</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>WINTERMELON</h2>
+          </div>
+          
+          <div class="col-2">
+            <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/6.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="99">Php 99.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span>FRENCH PREMIUM CHEESECAKE</h2>
+          </div>
+
+          <div class="col-2">
+            <p class="based">Gluta-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/1.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="115">Php 115.00</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="col-1">
+            <h2><span>[frappe] - </span></span>SALTED CARAMEL COFFEE</h2>
+          </div>
+
+          <div class="col-2">
+                  <p class="based">Moringa-Collagen</p>
+          </div>
+          
+          <div class="cup-cont">
+            <img class="cup" src="img/6.png" alt="">
+          </div>
+          
+          <div class="size-buttons">
+            <div class="size-buts">
+              <p>Tall</p>
+              <button class="size" data-size="Tall" data-price="105">Php 105.00</button>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+
+    </section>
+  
+
+    <!-- cart -->
+    <div class="cart-cont">
+      <div id="cart">
+        <h2>CART</h2>
+      
+        <table>
+          <thead>
+            <tr>
+              <td>Product Name</td>
+              <td>Size</td>
+              <td>Price</td>
+              <td>Qty</td>
+              <td>Subtotal</td>
+              <td>Action</td>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+
+        <div class="total">
+
+          <div id="cart-icon">
+            <span id="cart-count">0</span>
+            <span>&nbspItems</span>
+          </div>
+
+          <p>Total: <span id="total-amount">Php 0.00</span></p>
+        </div>
+
+        <div id="cart-buttons">
+          <button id="copy-text-btn">Copy Cart as Text</button>
+          <button id="clear-cart">Clear Cart</button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="quote">
+      <p>BUBBLE DRINK & COFFEE WITH GLUTA AND COLLAGEN</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
