@@ -1,0 +1,238 @@
+/* START NAVBAR ========================================================================== */
+.wrapper{
+	background: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+.wrapper nav{
+	position: relative;
+	display: flex;
+	max-width: calc(100% - 200px);
+	margin: 0 auto;
+	height: 70px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .content{
+	display: flex;
+	align-items: center;
+}
+
+nav .content .links{
+	margin-left: 70px;
+	display: flex;
+}
+
+.content .logo a{
+	font-weight: 300;	
+    font-size: 20px;
+}
+
+
+.lil_font{
+	font-weight: 300;
+    font-size: 10px;
+}
+
+.content .links li{
+	list-style: none;
+	line-height: 70px;
+}
+
+.content .links li a,
+.content .links li label{
+	font-weight: 300;
+	padding: 9px 17px;
+	border-radius: 5px;
+	transition: all 0.5s cubic-bezier(.05, 0.05, 0.05, 0.5);
+}
+
+.content .links li label{
+	display: none;
+}
+
+.content .links li a:hover,
+.content .links li label:hover{
+    border-top: 1px solid var(--color1);
+    border-bottom: 1px solid var(--color1);
+}
+
+.wrapper .menu-icon{
+	cursor: pointer;
+	line-height: 70px;
+	width: 70px;
+	text-align: center;
+	display: none;
+}
+
+.wrapper input[type="checkbox"]{
+	display: none;
+}
+
+/* START DROP DOWN MENU ------------------------------------------------------------------ */
+
+.content .links ul{
+	position: absolute;
+	top: 70px;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.content .links li:hover > ul{
+	top: 70px;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s cubic-bezier(.05, 0.05, 0.05, 0.5);
+}
+
+.content .links ul li a{
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	border-radius: 0px!important;
+}
+
+.content .links ul ul{
+	position: absolute;
+	top: 0;
+	right: calc(-107% + 7px);
+}
+
+.content .links ul li{
+	position: relative;
+}
+
+.content .links ul li:hover ul{
+	top: 0;
+}
+/* END NAVBAR ==================================================================================== */
+
+/* START RESPONSIVE CODE =============================================================== */
+
+@media screen and (max-width: 1250px){
+	/* START NAV BAR --------------------------------------------*/
+	.wrapper nav{
+        max-width: 100%;
+        padding: 0 50px;
+	}
+
+	nav .content .links{
+		margin-left: 30px;
+    
+    }
+	
+	.content .links li a{
+		padding: 7px 13px;
+		margin-left: 0px;
+	}
+
+	
+}
+
+@media screen and (max-width: 1010px){
+	
+	/* START NAV BAR --------------------------------------------*/
+	.wrapper .menu-icon{
+    	display: block;
+	}
+
+	.wrapper #show-menu:checked ~ .menu-icon i::before{		
+		/* f00d is a font awesome icon unicode */
+		content: "\f00d";
+	}
+
+	nav .content .links {
+        display: block;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.927); /* Adjust the opacity as desired */
+        height: 10vh;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        text-align: center;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.5s cubic-bezier(.05, 0.05, 0.05, 0.5);
+    }
+    
+
+	nav #show-menu:checked ~ .content .links{
+		left: 0%;
+        height: 100vh;
+	}
+
+	.content .links li{
+		margin: 10px 0px;
+	}
+
+	.content .links li a,
+	.content .links li label{
+		line-height: 40px;
+		display: block;
+		border-radius: 0;
+		padding: 7px 17px;
+		cursor: pointer;
+	}
+
+	.content .links li a.desktop-link{
+		display: none;
+	}
+
+	.content .links li a:hover,
+	.content .links li label:hover{
+		border-top: 0;
+		border-bottom: 0;
+		border-right: 1px solid var(--color1);
+		border-right-width: 15px;
+		border-left: 1px solid var(--color1);
+		border-left-width: 15px;
+	}
+
+	/* START DROP DOWN MENU -------------------------------------*/	
+	.content .links ul,
+	.content .links ul ul{
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		background: none;
+		max-height: 0px;
+		overflow: hidden;;
+	}
+
+	.content .links #show-soldiers:checked ~ ul,
+	.content .links #show-settings:checked ~ ul,
+	.content .links #show-lists:checked ~ ul,
+	.content .links #show-my-bullets:checked ~ ul,
+	.content .links #show-cpanel:checked ~ ul{
+		max-height: 100vh;
+	}
+
+	.content .links ul li{
+		margin: 7px 20px;
+        text-align: center;
+	}
+
+	.content .links ul li a{
+		line-height: 30px;
+		border-radius: 5px!important;
+	}
+	/* END NAV BAR ----------------------------------------------*/
+
+}
+
+@media screen and (max-width: 470px){
+
+	/* START NAV BAR --------------------------------------------*/	
+	.wrapper nav{
+	padding: 0 7px;
+	}		
+	/* END NAV BAR --------------------------------------------*/	
+   
+}

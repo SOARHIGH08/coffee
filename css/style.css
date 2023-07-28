@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:wght@300&display=swap=Poppins:wght@200;300;400;500;600;700&display=swap=Great+Vibes&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root {
+    --color1: #97979B;
+    --color2: #6B7E60;
+    --color3: #3C342D;
+    --color4: #A06A3B;
+    --color5: #1F373E;   
+    --color6: #ffffffeb; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--color6);
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+html {
+    background-color: #242121;
+}
+
+.hero-section{
+    background-color: rgb(36, 33, 33);
+    background-image: url(../img/cofi-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(.8);
+}
+
+.hero-section h1{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 7px black;
+    font-family: 'Great Vibes', cursive;
+}
+
