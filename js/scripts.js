@@ -256,7 +256,7 @@ function clearCart() {
 }
 
 products.forEach(product => {
-  const sizeButtons = product.querySelectorAll(".size-buttons button");
+  const sizeButtons = product.querySelectorAll(".size-buts button");
   const productName = product.querySelector("h2").textContent;
 
   sizeButtons.forEach(button => {
@@ -313,3 +313,4 @@ function copyCartText() {
 }
 
 copyTextBtn.addEventListener("click", copyCartText);
+
