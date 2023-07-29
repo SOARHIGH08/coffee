@@ -2,7 +2,7 @@ const products = document.querySelectorAll(".product");
 const cartItems = document.getElementById("cart-items");
 const cartCount = document.getElementById("cart-count");
 const screenshotBtn = document.getElementById("screenshot-btn");
-const copyTextBtn = document.getElementById("copy-text-btn");
+// const copyTextBtn = document.getElementById("copy-text-btn");
 
 const hotButs = document.getElementById('hotButs');
 const icedButs = document.getElementById('icedButs');
@@ -14,6 +14,33 @@ const fClassicButs = document.getElementById('fClassicButs');
 const fMilkTeaButs = document.getElementById('fMilkTeaButs');
 const fPremiumButs = document.getElementById('fPremiumButs');
 
+// Function to update the screenshot button state based on cart count
+function updateScreenshotButtonState() {
+  if (cartCount.textContent === '0') {
+    screenshotBtn.disabled = true;
+    screenshotBtn.style.backgroundColor = 'gray';
+    screenshotBtn.style.borderColor = 'gray';
+  } else {
+    screenshotBtn.disabled = false;
+    screenshotBtn.style.backgroundColor = ''; // Reset to default background color
+  }
+}
+
+// Call the function to set the initial state of the screenshot button
+updateScreenshotButtonState();
+
+// Create a MutationObserver to watch for changes in cartCount element
+const observer = new MutationObserver(function (mutationsList) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      updateScreenshotButtonState();
+    }
+  }
+});
+
+// Start observing the cartCount element for changes
+observer.observe(cartCount, { childList: true });
+
 hotButs.addEventListener('click', () => {
   // Set Button 1 to active state
   hotButs.classList.add('active-buts');
@@ -21,6 +48,7 @@ hotButs.addEventListener('click', () => {
   // Reset Button 2 to inactive state
   icedButs.classList.remove('active-buts');
   frappeButs.classList.remove('active-buts');
+
 });
 
 icedButs.addEventListener('click', () => {
@@ -43,61 +71,82 @@ frappeButs.addEventListener('click', () => {
   icedButs.classList.remove('active-buts');
 });
 
-iClassicButs.addEventListener('click', () => {
-  // Set Button 2 to active state
-  iClassicButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
+iClassicButs.addEventListener('click', () => {
+  iClassicButs.classList.add('active-buts');
+  fClassicButs.classList.add('active-buts');
+
   iMilkTeaButs.classList.remove('active-buts');
+  fMilkTeaButs.classList.remove('active-buts');
+  
   iPremiumButs.classList.remove('active-buts');
+  fPremiumButs.classList.remove('active-buts');
 });
 
 iMilkTeaButs.addEventListener('click', () => {
-  // Set Button 2 to active state
   iMilkTeaButs.classList.add('active-buts');
+  fMilkTeaButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
   iClassicButs.classList.remove('default');
+  fClassicButs.classList.remove('default');
+
   iClassicButs.classList.remove('active-buts');
+  fClassicButs.classList.remove('active-buts');
+  
   iPremiumButs.classList.remove('active-buts');
+  fPremiumButs.classList.remove('active-buts');
 });
 
 iPremiumButs.addEventListener('click', () => {
-  // Set Button 2 to active state
   iPremiumButs.classList.add('active-buts');
+  fPremiumButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
   iClassicButs.classList.remove('default');
+  fClassicButs.classList.remove('default');
+
   iClassicButs.classList.remove('active-buts');
+  fClassicButs.classList.remove('active-buts');
+
   iMilkTeaButs.classList.remove('active-buts');
+  fMilkTeaButs.classList.remove('active-buts');
 });
 
 fClassicButs.addEventListener('click', () => {
-  // Set Button 2 to active state
+  iClassicButs.classList.add('active-buts');
   fClassicButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
+  iMilkTeaButs.classList.remove('active-buts');
   fMilkTeaButs.classList.remove('active-buts');
+  
+  iPremiumButs.classList.remove('active-buts');
   fPremiumButs.classList.remove('active-buts');
 });
 
 fMilkTeaButs.addEventListener('click', () => {
-  // Set Button 2 to active state
+  iMilkTeaButs.classList.add('active-buts');
   fMilkTeaButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
+  iClassicButs.classList.remove('default');
   fClassicButs.classList.remove('default');
+
+  iClassicButs.classList.remove('active-buts');
   fClassicButs.classList.remove('active-buts');
+  
+  iPremiumButs.classList.remove('active-buts');
   fPremiumButs.classList.remove('active-buts');
 });
 
 fPremiumButs.addEventListener('click', () => {
-  // Set Button 2 to active state
+  iPremiumButs.classList.add('active-buts');
   fPremiumButs.classList.add('active-buts');
 
-  // Reset Button 1 to inactive state
+  iClassicButs.classList.remove('default');
   fClassicButs.classList.remove('default');
+
+  iClassicButs.classList.remove('active-buts');
   fClassicButs.classList.remove('active-buts');
+
+  iMilkTeaButs.classList.remove('active-buts');
   fMilkTeaButs.classList.remove('active-buts');
 });
 
@@ -120,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     element.style.display = "none";
   }
 
+  
   // Show the selected category section and hide the rest
   function showCategorySection(category) {
     coffeeSections.forEach((section) => {
@@ -317,6 +367,16 @@ document.addEventListener("keydown", event => {
 
 // Take screenshot of the cart
 document.getElementById("screenshot-btn").addEventListener("click", function() {
+  const inputName = document.getElementById("inputName").value;
+  const inputMobile = document.getElementById("inputMobile").value;
+  const inputRoom = document.getElementById("inputRoom").value;
+
+  // Check if any of the inputs are empty
+  if (inputName === '' || inputMobile === '' || inputRoom === '') {
+      alert("Please fill in all the required fields (Name, Mobile, Room).");
+      return; // Do not proceed with the screenshot if any field is empty
+  }
+  
   // Select the element you want to capture
   const elementToCapture = document.getElementById("cart");
 

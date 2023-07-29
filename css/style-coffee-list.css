@@ -8,7 +8,7 @@
   filter: contrast(0.8);
 }
 
-.bg img {
+.bg img { 
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -185,7 +185,7 @@ tbody button,
 }
 
 .cart-cont {
-  overflow: scroll;
+  overflow-x: scroll;
   margin: 0 auto;
   margin: 50px auto;
 }
@@ -195,14 +195,37 @@ tbody button,
   width: max-content;
   border: 5px ridge #0000005a;
   border-radius: 5px;
-  background-color: #000000af;
+  background-color: #00000096;
+}
+
+
+#cart .input-cont {
+  display: flex;
+  justify-content: space-around;
+  margin:4px 5px;
+}
+
+.input-cont label {
+  margin-right: 2px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.input-cont input {
+  width: min(100%, 195px);
+  border-radius: 5px;
+}
+
+.input-cont input:focus {
+  background-color: #000000;
+  color: white;
 }
 
 #cart h2 {
   background-color: var(--color5);
   font-weight: 500;
   text-align: center;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 3px;
 }
 
@@ -248,7 +271,9 @@ tbody button {
 }
 
 .total {
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
   background-color: var(--color5);
   text-align: right;
 }
