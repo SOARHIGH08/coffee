@@ -359,7 +359,7 @@ footer .quote {
   margin-top: 15px;
   border-radius: 5px;
   box-shadow: inset 0 2px 5px #000000af;
-  z-index: 9999;
+  z-index: 7;
 }
 
 .popup table {
@@ -388,6 +388,67 @@ footer .quote {
 .popup .addon h3{
   color: var(--color6);
 }
+
+/* Style the announcement popup */
+.announcement-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000089;
+  z-index: 8;
+}
+
+.announcement {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: min(80%, 500px);
+  transform: translate(-50%, -50%);
+  padding-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Style the announcement content */
+.announcement-content {
+  text-align: center;
+}
+
+.announcement-content h1 {
+  background-color: rgb(121, 103, 1);
+  padding: 10px;;
+}
+
+.announcement-content ul {
+  margin-left: 20px;
+}
+
+.announcement-content p,
+.announcement-content li,
+.announcement-content button{
+  margin: 20px 25px 5px;
+  text-align: justify;
+  color: black;
+}
+
+.announcement-content li {
+  margin-top: 0;
+}
+
+/* Style the close button */
+.close-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
 
 
 /* follow us */

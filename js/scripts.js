@@ -454,3 +454,15 @@ if (isRunningInApp) {
   alert("You are running in an in-app environment.");
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const announcement = document.querySelector('.announcement-wrapper');
+  const closeBtn = document.querySelector('.close-btn');
+
+  // Show the announcement popup on page load
+  announcement.style.display = 'block';
+
+  // Add an event listener to the close button to hide the announcement
+  closeBtn.addEventListener('click', function () {
+    announcement.style.display = 'none';
+  });
+});
