@@ -438,7 +438,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function isInApp() {
   const userAgent = navigator.userAgent.toLowerCase();
   const inAppUserAgents = [
-    "wv", // Android WebView
     "fb", // Facebook in-app browser
     "line", // Line in-app browser
     "twitter", // Twitter in-app browser
