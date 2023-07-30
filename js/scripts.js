@@ -449,3 +449,10 @@ function isInApp() {
   return inAppUserAgents.some((ua) => userAgent.includes(ua));
 }
 
+// Call the function and show a notification based on the result
+const isRunningInApp = isInApp();
+if (isRunningInApp) {
+  alert("You are running in an in-app environment.");
+} else {
+  alert("You are running in a web browser.");
+}
