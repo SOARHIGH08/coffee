@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clickCount++;
       if (clickCount === 1) {
         clickTimer = setTimeout(resetClickCount, clickTimeLimit);
-      } else if (clickCount === 2) {
+      } else if (clickCount === 3) {
         clearTimeout(clickTimer);
         const productName = product.querySelector("h2").innerText;
         showIngredientsPopup(popups[index], productName);
