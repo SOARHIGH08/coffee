@@ -453,6 +453,4 @@ function isInApp() {
 const isRunningInApp = isInApp();
 if (isRunningInApp) {
   alert("You are running in an in-app environment.");
-} else {
-  alert("You are running in a web browser.");
 }
