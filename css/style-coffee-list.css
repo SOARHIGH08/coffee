@@ -350,6 +350,46 @@ footer .quote {
   margin: 0 10px
 }
 
+/* Hide the popup by default */
+.popup {
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 5px #000000af;
+  z-index: 9999;
+}
+
+.popup table {
+  border-collapse: collapse;
+}
+
+.popup table td {
+  padding: 5px 10px;
+  /* background-color: white; */
+  border: 1px solid black;
+}
+
+.popup h3 {
+  color: black;
+  font-weight: 600;
+}
+
+.popup tbody tr:nth-child(odd) {
+  background-color: #ddd9d9;
+}
+
+.popup .addon{
+  background-color: red;
+}
+
+.popup .addon h3{
+  color: var(--color6);
+}
+
+
 /* follow us */
 footer .icons{
   width: fit-content;

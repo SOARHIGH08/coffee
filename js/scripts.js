@@ -392,3 +392,45 @@ document.getElementById("screenshot-btn").addEventListener("click", function() {
     link.click();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const products = document.querySelectorAll(".product");
+  const popups = document.querySelectorAll(".popup");
+  const closeButton = document.querySelectorAll(".popup .close");
+  const clickTimeLimit = 300; // Time limit in milliseconds (adjust as needed)
+  let clickCount = 0;
+  let clickTimer;
+
+  function showIngredientsPopup(popup, ingredients) {
+    popup.querySelector("h3").innerText = `${ingredients}`;
+    popup.style.display = "block";
+  }
+
+  function hideIngredientsPopup(popup) {
+    popup.style.display = "none";
+  }
+
+  function resetClickCount() {
+    clickCount = 0;
+    clearTimeout(clickTimer);
+  }
+
+  products.forEach((product, index) => {
+    product.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount === 1) {
+        clickTimer = setTimeout(resetClickCount, clickTimeLimit);
+      } else if (clickCount === 2) {
+        clearTimeout(clickTimer);
+        const productName = product.querySelector("h2").innerText;
+        showIngredientsPopup(popups[index], productName);
+        resetClickCount();
+      }
+    });
+
+    closeButton[index].addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent the click event from reaching the parent (product) div
+      hideIngredientsPopup(popups[index]);
+    });
+  });
+});
